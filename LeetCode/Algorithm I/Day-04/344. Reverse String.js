@@ -1,16 +1,21 @@
 /**
- * @param {string} s
- * @return {string}
+ * @param {character[]} s
+ * @return {void} Do not return anything, modify s in-place instead.
  */
-var reverseWords = function(s) {
-    let splittedString = s.split();
-    let reversedString = [];
-    for(let item of s.split(" ") ) 
+var reverseString = function(s) {
+    //solution1 using twoPointers approach
+    let leftPointer = 0;
+    let temp;
+    let rightPointer = s.length - 1;
+    while(leftPointer < rightPointer)
         {
-           reversedString.push( item.split("").reverse().join(""));
+            temp = s[rightPointer];
+            s[rightPointer] = s[leftPointer];
+            s[leftPointer] = temp;
+            leftPointer++;
+            rightPointer--;
         }
-    
-    return reversedString.join(" ");
-   
-   
+    return s;
+    //solution2
+    // return s.reverse();
 };
