@@ -19,11 +19,7 @@ var middleNode = function(head) {
             cur = cur.next;
             length ++;
         }
-    if (length%2 === 0)
-        {
-            middle = (length/2) +1
-        }
-    else (middle = Math.floor(length / 2) + 1)
+    middle = Math.floor(length / 2) + 1
     
     while (pointer < middle)
         {
