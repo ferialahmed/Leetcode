@@ -12,27 +12,45 @@
  */
 var removeNthFromEnd = function(head, n) {
     let pointer = head,cur = head;
-    let length = 0;
-    let removedNode;
-    while(pointer)
+    let i = 1;
+    // let length = 0;
+    // let removedNode;
+    // while(pointer)
+    //     {
+    //         length++;
+    //         pointer = pointer.next;
+    //     }
+    // if(length === 1)
+    //     {
+    //         return null;
+    //     }
+    // if (length === n)
+    //     {
+    //         cur = cur.next;
+    //         return cur;
+    //     }
+    // removedNode = length - n;
+    // while(removedNode-1)
+    //     {
+    //         cur = cur.next;
+    //         removedNode --;
+    //     }
+    // cur.next = cur.next.next;
+    // return head;
+    while(i <= n)
         {
-            length++;
             pointer = pointer.next;
+            i++;
         }
-    if(length === 1)
+    if(pointer == null)
         {
-            return null;
+            head = head.next
+            return head;
         }
-    if (length === n)
+    while(pointer.next)
         {
+            pointer = pointer.next;
             cur = cur.next;
-            return cur;
-        }
-    removedNode = length - n;
-    while(removedNode-1)
-        {
-            cur = cur.next;
-            removedNode --;
         }
     cur.next = cur.next.next;
     return head;
