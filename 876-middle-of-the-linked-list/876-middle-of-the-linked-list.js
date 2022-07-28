@@ -12,28 +12,23 @@
 var middleNode = function(head) {
     let cur = head;
     let length = 0;
-    // let pointer = 1;
+    let pointer = 1;
     let middle;
     while(cur != null)
         {
             cur = cur.next;
             length ++;
         }
-//     if (length%2 === 0)
-//         {
-//             middle = (length/2) +1
-//         }
-middle = Math.floor(length / 2) 
+    if (length%2 === 0)
+        {
+            middle = (length/2) +1
+        }
+    else (middle = Math.floor(length / 2) + 1)
     
-//     while (pointer < middle)
-//         {
-//             head = head.next;
-//             pointer ++;
-//         }
-    while (middle)
+    while (pointer < middle)
         {
             head = head.next;
-            middle--;
+            pointer ++;
         }
     return head;
 };
