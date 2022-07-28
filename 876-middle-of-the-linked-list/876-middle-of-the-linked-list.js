@@ -13,15 +13,15 @@ var middleNode = function(head) {
     let cur = head;
     let length = 0;
     let pointer = 1;
-    let middle;
+    let Mid;
     while(cur != null)
         {
             cur = cur.next;
             length ++;
         }
-    middle = Math.floor(length / 2) + 1
+    Mid = Math.floor(length / 2) + 1
     
-    while (pointer < middle)
+    while (pointer < Mid)
         {
             head = head.next;
             pointer ++;
