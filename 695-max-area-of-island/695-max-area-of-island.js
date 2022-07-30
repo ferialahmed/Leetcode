@@ -6,11 +6,11 @@ var maxAreaOfIsland = function(grid) {
     let maximum = 0, res = 0, area = 0, sr = 0, sc = 0;
     const rows = grid.length;
     const cols = grid[0].length;
-    // for (let sr =0; sr< rows; sr++)
-    while (sr < rows)
+    for (let sr =0; sr< rows; sr++)
+    // while (sr < rows)
         {
-            // for (let sc = 0; sc < cols; sc++)
-            while (sc < cols)
+            for (let sc = 0; sc < cols; sc++)
+            // while (sc < cols)
                 {
                     if (grid[sr][sc] === 1)
                         {
@@ -18,10 +18,10 @@ var maxAreaOfIsland = function(grid) {
                             res = Max(sr,sc);
                             maximum = Math.max(res, maximum);
                         }
-                    sc ++;
+                    // sc ++;
                 }
-            sr ++;
-            sc = 0;
+            // sr ++;
+            // sc = 0;
         }
     function Max (r, c)
     {
