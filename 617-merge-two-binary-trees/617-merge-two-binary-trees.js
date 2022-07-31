@@ -19,7 +19,7 @@ var mergeTrees = function(root1, root2) {
     sum = root1Val + root2Val;
     let mergedNode = new TreeNode(sum);
     
-    mergedNode.left = mergeTrees (root1?root1.left : null, root2? root2.left: null);
+    mergedNode.left = mergeTrees (root1?root1.left : null, root2?root2.left: null);
     
     mergedNode.right = mergeTrees (root1?root1.right : null, root2?root2.right: null);
     return mergedNode;
